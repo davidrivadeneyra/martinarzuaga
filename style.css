@@ -1,0 +1,141 @@
+body {
+    background-color: #151719;
+}
+
+.graphic {
+    width: 100%;
+}
+
+.path-three {
+    /* display: none; */
+}
+
+
+.circle-one {
+    offset-path: path("M1418.64 359.49L952.888 631.684L1186.67 766.76L1207.43 754.63");
+}
+
+.circle-two {
+    offset-path: path("M1204.41 731.84L1030.7 631.47L1380.24 427.189L1264.86 360.522");
+}
+
+.circle-three {
+    offset-path: path("M790.401 673.282L914.231 744.828L1069.68 653.984L1225.41 743.961");
+}
+
+.circle-four {
+    offset-path: path("M1225.39 744.132L1031.28 857.573L1188.15 948.212");
+}
+
+.circle-five {
+    offset-path: path("M1342.4 947.007L1147.99 834.683L1264.56 766.561L1238.58 751.549");
+}
+
+.circle-six {
+    offset-path: path("M757.916 609.341L836.191 654.567L1030.36 541.093L1225.22 653.681L1147.63 699.024L1223.55 742.885");
+}
+
+.circle-seven {
+    offset-path: path("M720.818 767.292L875.168 677.088L1070.03 789.675L1108.92 812.146L1216.32 749.38");
+}
+
+.circle-eigth {
+    offset-path: path("M1555.23 460.826L1419.66 540.055L1497.6 585.087L1225.64 744.029");
+}
+
+.circle-nine {
+    offset-path: path("M1795.68 546.751L1420.22 766.176L1381.25 743.664L1303.54 789.088L1227.27 745.021");
+}
+
+.circle-ten {
+    offset-path: path("M1651.06 809.312L1419.9 675.755L1303.35 743.866L1264.54 766.556L1227.27 745.022");
+}
+
+.circle-eleven {
+    offset-path: path("M1615.84 924.359L1498.76 856.71L1420.31 811.385L1381.46 834.107L1227.27 745.021");
+}
+
+[class^="circle-"] {
+    fill: #3DF498;
+}
+
+.circle-one,
+.circle-three,
+.circle-five,
+.circle-six,
+.circle-seven,
+.circle-eigth,
+.circle-nine,
+.circle-ten,
+.circle-eleven {
+    animation: moveAlongPath 1s ease-out infinite;
+}
+
+.circle-two,
+.circle-four {
+    animation: moveAlongPathReverse 1s ease-out infinite;
+}
+
+.circle-one,
+.circle-three,
+.circle-four,
+.circle-seven,
+.circle-eleven {
+    animation-delay: .5s;
+}
+
+@keyframes moveAlongPath {
+    100% {
+        offset-distance: 100%;
+    }
+    0% {
+        offset-distance: 0%;
+    }
+}
+@keyframes moveAlongPathReverse {
+    0% {
+        offset-distance: 100%;
+    }
+    100% {
+        offset-distance: 0%;
+    }
+}
+
+
+[class^="square-"] {
+    animation: colorChange 1s infinite ease-out;
+}
+
+.square-one {
+    animation-delay: 0.2s;
+}
+
+.square-two {
+    animation-delay: 0.4s;
+}
+
+.square-three {
+    animation-delay: 0.6s;
+}
+
+.square-four {
+    animation-delay: 0.8s;
+}
+
+.square-five {
+    animation-delay: 1s;
+}
+
+@keyframes colorChange {
+
+
+    0% {
+        filter: drop-shadow(0 0 5px rgba(61, 244, 152, 0));
+    }
+    50% {
+        filter: drop-shadow(0 0 15px rgba(61, 244, 152, 1));
+    }
+    100% {
+        filter: drop-shadow(0 0 5px rgba(61, 244, 152, 0));
+    }
+}
